@@ -1,0 +1,23 @@
+{
+  "name": "teste_fiqon",
+  "version": "1.0.0",
+  "description": "Teste para entrar na fiqOn",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --ui tdd index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GabrielKuiawa/Teste-FiqOn.git"
+  },
+  "author": "Gabriel Kuiawa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GabrielKuiawa/Teste-FiqOn/issues"
+  },
+  "homepage": "https://github.com/GabrielKuiawa/Teste-FiqOn#readme",
+  "dependencies": {
+    "axios": "^1.6.7",
+    "mocha": "^10.2.0"
+  }
+}
