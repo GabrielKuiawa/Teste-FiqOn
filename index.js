@@ -24,14 +24,14 @@ const auth = async () => {
 const pillarsFiqOn = async () => {
   try {
     const session_url = url_list_pilares;
-  
-    let api_token = await auth();
+    const api_token = await auth();
+
     let page = 0;
     let more_items = true;
     let pillars = "";
 
     while(more_items) {
-      let url_page = session_url + `?page=${page}&api_token=${api_token}`
+      const url_page = session_url + `?page=${page}&api_token=${api_token}`
       const response = await axios.get(url_page);
 
       page = response.data.next_page;
@@ -51,7 +51,7 @@ const sendPillars = async () => {
   try {
     pillars = await pillarsFiqOn();
     const session_url = url_send_response + `?api_token=${pillars.token}`;
-    let base64 = Buffer.from(pillars.data).toString('base64');
+    const base64 = Buffer.from(pillars.data).toString('base64');
     const body = {"answer" : base64 };
     const response = await axios.post(session_url,body);
     
