@@ -50,6 +50,7 @@ const pillarsFiqOn = async () => {
 const sendPillars = async () => {
   try {
     pillars = await pillarsFiqOn();
+    
     const session_url = url_send_response + `?api_token=${pillars.token}`;
     const base64 = Buffer.from(pillars.data).toString('base64');
     const body = {"answer" : base64 };
